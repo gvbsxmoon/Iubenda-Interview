@@ -1,0 +1,480 @@
+@import "./ext";
+
+// FORM
+[class*="section"] {
+	margin: 40px;
+
+	h5 {
+		color: $mid-gray;
+	}
+}
+
+.form-header {
+	@extend %flex-between;
+	padding: 40px;
+	border-bottom: 1px solid $light-gray;
+
+	.left {
+		@extend %flex-center;
+
+		.monitor-icon {
+			padding: 25px 20px;
+			background-color: $light-gray;
+			border-radius: 6px;
+		}
+
+		.page-info {
+			margin-left: 1.5rem;
+
+			h5 {
+				color: $mid-gray;
+			}
+		}
+	}
+
+	.right {
+		@extend %flex-center;
+
+		h5 {
+			margin-right: 1.5rem;
+		}
+
+		.form-chart {
+			position: relative;
+
+			.circle-chart {
+				stroke: $dark-orange;
+				fill: none;
+				stroke-width: 3.5;
+				stroke-linecap: round;
+				transition: all 1s;
+			}
+
+			#percentage {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-family: iubendaMedium;
+				font-size: .8rem;
+				color: $dark-orange;
+				transition: all 1s;
+
+				span {
+					font-family: iubendaBold;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+.cta {
+	@extend %flex-between;
+	padding: 40px;
+	border-top: 1px solid $light-gray;
+
+	button {
+		cursor: pointer;
+		border: none;
+
+		&:first-child {
+			background-color: transparent;
+
+			h5 {
+				color: $mid-gray;
+				letter-spacing: unset;
+			}
+		}
+
+		&:last-child {
+			background-color: $primary;
+			border-radius: 32px;
+			width: 260px;
+			height: 45px;
+			transition: all 1s;
+
+			h5 {
+				color: #fff;
+				letter-spacing: unset;
+				padding-bottom: 0;
+			}
+
+			&:disabled {
+				cursor: default;
+				background-color: $light-gray;
+			}
+		}
+	}
+}
+
+#learnmore {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	line-height: 0;
+	color: $mid-gray;
+}
+
+#moreinfo {
+	margin: 1rem 0.5rem;
+	padding: 0.5rem 1.5rem;
+	background-color: $light-orange;
+	color: $dark-orange;
+	@extend %flex-center;
+	border-radius: 0 6px 6px 6px;
+	position: relative;
+
+	.exc {
+		@extend %flex-center;
+		width: 24px;
+		height: 24px;
+		border: 1px solid $dark-orange;
+		border-radius: 50%;
+		margin-right: 0.5rem;
+		padding: 1rem;
+	}
+
+	.triangle {
+		position: absolute;
+		left: 0;
+		top: -10px;
+		width: 0;
+		height: 0;
+		border-bottom: 20px solid $light-orange;
+		border-right: 20px solid transparent;
+	}
+}
+
+// COMPONENTS
+.iubenda-logo {
+	display: block;
+	margin: auto;
+	width: 200px;
+	padding: 30px;
+}
+
+.container {
+	background-color: #fff;
+	border: 1px solid $border;
+	margin: 0 30px;
+	border-radius: 10px;
+}
+
+#tipbanner {
+	@extend %flex-start;
+	margin: 40px;
+	border: 1px solid $border;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+
+	.green-checkmark {
+		background-color: $light-green;
+		padding: 25px;
+		margin-right: 1.5rem;
+	}
+
+	p {
+		padding-right: 3rem;
+	}
+
+	#closebanner {
+		border: none;
+		padding: 0;
+		margin: 1rem;
+		background-image: url(../images/icons/icon_cross_mia.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: transparent;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+	}
+}
+
+#second.selector {
+	margin-top: 80px !important;
+}
+
+.selector {
+	@extend %flex-start;
+	margin: 40px;
+
+	h2 {
+		margin-left: 1rem;
+	}
+
+	.custom-switch {
+		position: relative;
+		display: block;
+		width: 48px;
+		height: 26px;
+
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+
+			&:checked {
+				+ .slider {
+					background-color: $primary;
+
+					&::before {
+						transform: translateX(22px);
+					}
+				}
+			}
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: $light-gray;
+			border-radius: 2rem;
+			transition: all 0.4s ease-in-out;
+
+			&::before {
+				position: absolute;
+				content: "";
+				height: 20px;
+				width: 20px;
+				left: 3px;
+				top: 3px;
+				background-color: white;
+				border-radius: 50%;
+				transition: all 0.4s ease-in-out;
+			}
+		}
+	}
+}
+
+.choose {
+	@extend %flex-start;
+	margin: 0.5rem 0;
+
+	&.large label {
+		img,
+		span {
+			width: 150px;
+			height: 80px;
+		}
+	}
+
+	&.small label {
+		span {
+			@extend %flex-center;
+			width: 150px;
+			height: 50px;
+			font-size: 0.8rem;
+			font-family: iubendaRegular;
+			color: $secondary;
+
+			svg {
+				width: 24px;
+				height: 24px;
+				margin-right: 0.5rem;
+			}
+		}
+
+		input:checked + span {
+			font-family: iubendaMedium;
+
+			svg {
+				&.eu {
+					g {
+						g {
+							fill: $primary;
+						}
+						& ~ path {
+							stroke: $primary;
+						}
+					}
+				}
+
+				&.ww {
+					g {
+						& ~ circle {
+							fill: $primary;
+						}
+						g {
+							stroke: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.mid label {
+		img {
+			width: 160px;
+			height: 60px;
+		}
+	}
+
+	label {
+		@extend %flex-center;
+		font-size: 0.8rem;
+		color: $secondary;
+		flex-direction: column;
+
+		&:nth-child(2) {
+			margin: 0 1rem;
+		}
+
+		img,
+		span {
+			margin-bottom: 0.5rem;
+			border-radius: 6px;
+			border: 2px solid $border;
+		}
+
+		span {
+			display: grid;
+			place-content: center;
+			font-size: 1.5rem;
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+			margin: 0;
+			padding: 0;
+
+			&:checked + img,
+			&:checked + span {
+				border-radius: 6px;
+				border: 2px solid $primary;
+				box-shadow: 0 0 0 4px $light-green;
+				color: $primary;
+			}
+		}
+	}
+}
+
+.custom-checkbox {
+	@extend %flex-column;
+	margin: 1rem 0;
+
+	label {
+		@extend %flex-center;
+		font-family: iubendaRegular;
+		letter-spacing: -0.5px;
+		color: $secondary;
+		cursor: pointer;
+		line-height: 0;
+
+		&:nth-child(2) {
+			margin: 0.5rem 0;
+		}
+
+		[type="checkbox"] {
+			position: relative;
+			width: 20px;
+			height: 20px;
+			border: 2px solid $border;
+			border-radius: 4px;
+			appearance: none;
+			cursor: pointer;
+			margin-right: 0.5rem;
+			margin-left: 0;
+
+			&::before {
+				position: absolute;
+				content: "";
+				display: none;
+				width: 4px;
+				height: 7px;
+				top: 50%;
+				left: 50%;
+				border-style: solid;
+				border-color: $primary;
+				border-width: 0 3px 3px 0;
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+
+			&:checked {
+				background-color: #fff;
+				&::before {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.custom-radio {
+	margin: 1rem 0;
+
+	label {
+		font-family: iubendaRegular;
+		letter-spacing: -0.5px;
+		color: $secondary;
+		position: relative;
+		cursor: pointer;
+		padding: 0 2rem;
+
+		[type="radio"] {
+			position: absolute;
+			opacity: 0;
+			margin: 0;
+			padding: 0;
+
+			&:checked + .green-circle::after {
+				display: block;
+			}
+		}
+
+		.green-circle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			border: 2px solid $border;
+			border-radius: 50%;
+
+			&::after {
+				box-sizing: content-box;
+				display: none;
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 6px;
+				height: 6px;
+				background-color: $primary;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	display: flex;
+	padding: 30px;
+	justify-content: center;
+}
+
+.qst {
+	font-family: iubendaMedium;
+	font-size: 0.8rem;
+	color: #fff;
+	background-color: $border;
+	padding: 0.5rem 0.3rem;
+	margin: 0 0.5rem;
+	border-radius: 50%;
+	user-select: none;
+	cursor: default;
+}

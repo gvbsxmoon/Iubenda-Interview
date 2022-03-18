@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+			integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style/style.css" />
+		<link rel="icon" href="./images/logo.png" />
+		<title>Iubenda</title>
+	</head>
+	<body>
+		<img src="./images/iubenda.svg" alt="Iubenda Logo" class="iubenda-logo" />
+
+		<form id="integration" class="container">
+			<div class="form-header">
+				<div class="left">
+					<div class="monitor-icon">
+						<img src="./images/icons/icon_monitor_mia.svg" />
+					</div>
+					<div class="page-info">
+						<h4>www.domain.com</h4>
+						<h5>Account & Billing info</h5>
+					</div>
+				</div>
+				<div class="right">
+					<h5>Your current compliance rating</h5>
+					<div class="form-chart">
+						<svg height="80px" viewBox="0 0 36 36" width="80px">
+							<path
+								class="circle-chart"
+								stroke-dasharray="0, 100"
+								d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+							/>
+						</svg>
+                        <div id="percentage"><span>0</span>%</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="tipbanner">
+				<div class="green-checkmark">
+					<img src="./images/icons/icon_checkmark.svg" />
+				</div>
+
+				<p>
+					Your website has been created and your legal documents have been
+					generated. Setup your cookie banner and privacy policy button to
+					complete the integration.
+				</p>
+				<button type="button" id="closebanner"></button>
+			</div>
+
+			<!-- Cookie Banner -->
+			<div class="selector">
+				<label class="custom-switch">
+					<input type="checkbox" id="firstToggle" checked />
+					<span class="slider"></span>
+				</label>
+
+				<h2>Add a cookie banner</h2>
+			</div>
+
+			<div class="cookie">
+				<div class="position-section"></div>
+
+				<div class="theme-section">
+					<h5>Theme</h5>
+					<div class="choose large">
+						<label for="dark">
+							<input type="radio" name="theme" id="dark" />
+							<img src="./images/fakes/custom_banner_dark.png" />
+							Dark
+						</label>
+						<label for="light">
+							<input type="radio" name="theme" id="light" />
+							<img src="./images/fakes/custom_banner_light.png" />
+							Light
+						</label>
+						<label for="custom">
+							<input type="radio" name="theme" id="custom" />
+							<span>+</span>
+							Custom style
+						</label>
+					</div>
+				</div>
+
+				<div class="legislation-section">
+					<h5>Legislation</h5>
+					<div class="choose small">
+						<label for="gdpr">
+							<input type="radio" name="leg" id="gdpr" />
+							<span>GDPR Only</span>
+						</label>
+						<label for="ccpa">
+							<input type="radio" name="leg" id="ccpa" />
+							<span>CCPA Only</span>
+						</label>
+						<label for="both">
+							<input type="radio" name="leg" id="both" />
+							<span>Both</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="consent-section">
+					<h5>Require consent from</h5>
+					<div class="choose small">
+						<label for="eu">
+							<input type="radio" name="consent" id="eu" />
+							<span
+								><svg
+									height="32"
+									viewBox="0 0 32 32"
+									width="32"
+									xmlns="http://www.w3.org/2000/svg"
+									class="eu"
+								>
+									<g fill="none" fill-rule="evenodd" transform="translate(1 3)">
+										<g fill="#323232">
+											<path d="m4.5 4.5h25.5v18h-25.5z" fill-opacity=".05" />
+											<path
+												d="m13.5 6c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75-.75.33578644-.75.75.3357864.75.75.75z"
+											/>
+											<path
+												d="m13.5 16.5c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+											/>
+											<path
+												d="m18.75 11.25c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+												transform="matrix(0 1 -1 0 29.25 -8.25)"
+											/>
+											<path
+												d="m8.25 11.25c.41421356 0 .75-.3357864.75-.75s-.33578644-.75-.75-.75-.75.3357864-.75.75.33578644.75.75.75z"
+												transform="matrix(0 1 -1 0 18.75 2.25)"
+											/>
+											<path
+												d="m17.2123106 14.9623106c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+												transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 39.432874 12.090991)"
+											/>
+											<path
+												d="m9.7876894 7.5376894c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75c-.41421356 0-.75.33578644-.75.75s.33578644.75.75.75z"
+												transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 21.508251 4.666369)"
+											/>
+											<path
+												d="m9.7876894 14.9623106c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75c-.41421356 0-.75.3357864-.75.75s.33578644.75.75.75z"
+												transform="matrix(-.70710678 -.70710678 .70710678 -.70710678 6.659009 31.182874)"
+											/>
+											<path
+												d="m17.2123106 7.5376894c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75-.75.33578644-.75.75.3357864.75.75.75z"
+												transform="matrix(-.70710678 -.70710678 .70710678 -.70710678 24.583632 23.758252)"
+											/>
+										</g>
+										<path
+											d="m.75 1.5h25.3906929v18h-25.3906929z"
+											stroke="#323232"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="m.75 0v26.027153"
+											fill="#d8d8d8"
+											stroke="#323232"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</g>
+								</svg>
+								EU Only</span
+							>
+						</label>
+						<label for="ww">
+							<input type="radio" name="consent" id="ww" />
+							<span
+								><svg
+									height="32"
+									viewBox="0 0 32 32"
+									width="32"
+									xmlns="http://www.w3.org/2000/svg"
+									class="ww"
+								>
+									<g fill="none" fill-rule="evenodd" transform="translate(1 2)">
+										<circle
+											cx="18"
+											cy="14.368421"
+											fill="#000"
+											fill-opacity=".05"
+											r="13"
+										/>
+										<g stroke="#323232">
+											<circle cx="13" cy="13.368421" r="13" />
+											<path
+												d="m17.5454545 4.36842105h-3.4090909l-2.0454545 1.71428572v1.14285714h-2.0454546l-2.0454545 1.14285714v1.14285715h3.4090909l.6818182.5714286h1.3636364l1.3636363 1.1428571h2.7272727l1.3636364 1.1428572 1.3636364-1.1428572h2.7272727"
+											/>
+											<path
+												d="m15.5 15.2434211h-1.25l-1.875-1.875h-2.5l-1.875 1.875 1.25 3.125h1.875l1.25 1.25v3.125l.625.625h1.25l1.875-1.875v-1.875l1.875-1.875z"
+											/>
+										</g>
+									</g></svg
+								>World Wide</span
+							>
+						</label>
+					</div>
+				</div>
+
+				<div class="banner-buttons-section">
+					<h5>Banner buttons</h5>
+					<div class="custom-checkbox">
+						<label for="accept">
+							<input type="checkbox" id="accept" name="banner" />
+							Explicit Accept and Customize buttons
+						</label>
+						<label for="reject">
+							<input type="checkbox" id="reject" name="banner" />
+							Explicit Reject buttons
+						</label>
+					</div>
+				</div>
+
+				<div class="other-section">
+					<h5>Other options</h5>
+					<div class="custom-checkbox">
+						<label for="iab">
+							<input type="checkbox" id="iab" name="options" />
+							Enable IAB Transparency and Consent Framework -
+							<button type="button" id="learnmore">Learn more</button>
+						</label>
+						<div id="moreinfo" style="display: none">
+							<div class="exc">!</div>
+							<div class="triangle"></div>
+							You may should activate this feature if you show ads on your
+							website
+						</div>
+						<label for="amp">
+							<input type="checkbox" id="amp" name="options" />
+							Enable Google AMP support
+							<span class="qst">?</span>
+						</label>
+						<label for="blockscript">
+							<input type="checkbox" id="blockscript" name="options" />
+							Automatically block scripts detected by the plugin
+							<span class="qst">?</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- Policy Privacy -->
+			<div class="selector">
+				<label class="custom-switch">
+					<input type="checkbox" id="secondToggle" checked />
+					<span class="slider"></span>
+				</label>
+
+				<h2>Add the privacy policy button</h2>
+			</div>
+
+			<div class="policy">
+				<div class="policy-style-section">
+					<h5>Button style</h5>
+					<div class="choose mid">
+						<label for="policy-light">
+							<input type="radio" name="policy-button" id="policy-light" />
+							<img src="./images/fakes/custom_button_light.png" />
+							Light
+						</label>
+						<label for="policy-dark">
+							<input type="radio" name="policy-button" id="policy-dark" />
+							<img src="./images/fakes/custom_button_dark.png" />
+							Dark
+						</label>
+					</div>
+				</div>
+
+				<div class="policy-position-section">
+					<h5>Button position</h5>
+					<div class="custom-radio">
+						<label for="auto">
+							<input type="radio" id="auto" name="position" />
+							<span class="green-circle"></span>
+							Put automatically button on footer
+						</label>
+						<label for="manual">
+							<input type="radio" id="manual" name="position" />
+							<span class="green-circle"></span>
+							Integrate button manually
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="cta">
+				<button type="button" id="resetbutton"><h5>Reset settings</h5></button>
+				<button type="button" id="integrate" disabled><h5>Integrate</h5></button>
+			</div>
+		</form>
+
+		<footer class="footer">
+			<a href="/">Documentation</a>
+			<a href="/">Contact support</a>
+		</footer>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

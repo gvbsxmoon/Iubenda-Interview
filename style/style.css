@@ -1,0 +1,609 @@
+.form-header .left, .form-header .right, #moreinfo, #moreinfo .exc, .choose.small label span, .choose label, .custom-checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tipbanner, .selector, .choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-header, .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@font-face {
+  font-family: iubendaBold;
+  src: url(../fonts/hk-grotesk/HKGrotesk-BoldLegacy.otf);
+}
+
+@font-face {
+  font-family: iubendaMedium;
+  src: url(../fonts/hk-grotesk/HKGrotesk-Medium.otf);
+}
+
+@font-face {
+  font-family: iubendaRegular;
+  src: url(../fonts/hk-grotesk/HKGrotesk-Regular.otf);
+}
+
+@font-face {
+  font-family: iubendaLight;
+  src: url(../fonts/hk-grotesk/HKGrotesk-Light.otf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: iubendaRegular;
+  font-size: 16px;
+}
+
+@media (min-width: 900px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+h2 {
+  color: #323232;
+  font-family: iubendaBold;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+
+h4 {
+  color: #323232;
+  font-family: iubendaBold;
+  font-size: 1.3rem;
+  letter-spacing: -0.7px;
+  padding-bottom: 0.5rem;
+}
+
+h5 {
+  color: #323232;
+  font-family: iubendaBold;
+  font-size: 1rem;
+}
+
+p {
+  font-family: iubendaRegular;
+  color: #323232;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: #323232;
+  font-family: iubendaBold;
+  letter-spacing: -0.5px;
+  margin: 0 1rem;
+}
+
+label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+[class*="section"] {
+  margin: 40px;
+}
+
+[class*="section"] h5 {
+  color: #9e9e9e;
+}
+
+.form-header {
+  padding: 40px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.form-header .left .monitor-icon {
+  padding: 25px 20px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+.form-header .left .page-info {
+  margin-left: 1.5rem;
+}
+
+.form-header .left .page-info h5 {
+  color: #9e9e9e;
+}
+
+.form-header .right h5 {
+  margin-right: 1.5rem;
+}
+
+.form-header .right .form-chart {
+  position: relative;
+}
+
+.form-header .right .form-chart .circle-chart {
+  stroke: #D0784E;
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.form-header .right .form-chart #percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: iubendaMedium;
+  font-size: .8rem;
+  color: #D0784E;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.form-header .right .form-chart #percentage span {
+  font-family: iubendaBold;
+  font-size: 1.2rem;
+}
+
+.cta {
+  padding: 40px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.cta button {
+  cursor: pointer;
+  border: none;
+}
+
+.cta button:first-child {
+  background-color: transparent;
+}
+
+.cta button:first-child h5 {
+  color: #9e9e9e;
+  letter-spacing: unset;
+}
+
+.cta button:last-child {
+  background-color: #1cc691;
+  border-radius: 32px;
+  width: 260px;
+  height: 45px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.cta button:last-child h5 {
+  color: #fff;
+  letter-spacing: unset;
+  padding-bottom: 0;
+}
+
+.cta button:last-child:disabled {
+  cursor: default;
+  background-color: #f1f1f1;
+}
+
+#learnmore {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+  color: #9e9e9e;
+}
+
+#moreinfo {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #FFF4E6;
+  color: #D0784E;
+  border-radius: 0 6px 6px 6px;
+  position: relative;
+}
+
+#moreinfo .exc {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #D0784E;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  padding: 1rem;
+}
+
+#moreinfo .triangle {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #FFF4E6;
+  border-right: 20px solid transparent;
+}
+
+.iubenda-logo {
+  display: block;
+  margin: auto;
+  width: 200px;
+  padding: 30px;
+}
+
+.container {
+  background-color: #fff;
+  border: 1px solid #cbcbcb;
+  margin: 0 30px;
+  border-radius: 10px;
+}
+
+#tipbanner {
+  margin: 40px;
+  border: 1px solid #cbcbcb;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#tipbanner .green-checkmark {
+  background-color: #e8f9f4;
+  padding: 25px;
+  margin-right: 1.5rem;
+}
+
+#tipbanner p {
+  padding-right: 3rem;
+}
+
+#tipbanner #closebanner {
+  border: none;
+  padding: 0;
+  margin: 1rem;
+  background-image: url(../images/icons/icon_cross_mia.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#second.selector {
+  margin-top: 80px !important;
+}
+
+.selector {
+  margin: 40px;
+}
+
+.selector h2 {
+  margin-left: 1rem;
+}
+
+.selector .custom-switch {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 26px;
+}
+
+.selector .custom-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.selector .custom-switch input:checked + .slider {
+  background-color: #1cc691;
+}
+
+.selector .custom-switch input:checked + .slider::before {
+  -webkit-transform: translateX(22px);
+          transform: translateX(22px);
+}
+
+.selector .custom-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+  border-radius: 2rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.selector .custom-switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.choose {
+  margin: 0.5rem 0;
+}
+
+.choose.large label img,
+.choose.large label span {
+  width: 150px;
+  height: 80px;
+}
+
+.choose.small label span {
+  width: 150px;
+  height: 50px;
+  font-size: 0.8rem;
+  font-family: iubendaRegular;
+  color: #323232;
+}
+
+.choose.small label span svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.choose.small label input:checked + span {
+  font-family: iubendaMedium;
+}
+
+.choose.small label input:checked + span svg.eu g g {
+  fill: #1cc691;
+}
+
+.choose.small label input:checked + span svg.eu g ~ path {
+  stroke: #1cc691;
+}
+
+.choose.small label input:checked + span svg.ww g ~ circle {
+  fill: #1cc691;
+}
+
+.choose.small label input:checked + span svg.ww g g {
+  stroke: #1cc691;
+}
+
+.choose.mid label img {
+  width: 160px;
+  height: 60px;
+}
+
+.choose label {
+  font-size: 0.8rem;
+  color: #323232;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.choose label:nth-child(2) {
+  margin: 0 1rem;
+}
+
+.choose label img,
+.choose label span {
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border: 2px solid #cbcbcb;
+}
+
+.choose label span {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+}
+
+.choose label input {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.choose label input:checked + img,
+.choose label input:checked + span {
+  border-radius: 6px;
+  border: 2px solid #1cc691;
+  -webkit-box-shadow: 0 0 0 4px #e8f9f4;
+          box-shadow: 0 0 0 4px #e8f9f4;
+  color: #1cc691;
+}
+
+.custom-checkbox {
+  margin: 1rem 0;
+}
+
+.custom-checkbox label {
+  font-family: iubendaRegular;
+  letter-spacing: -0.5px;
+  color: #323232;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.custom-checkbox label:nth-child(2) {
+  margin: 0.5rem 0;
+}
+
+.custom-checkbox label [type="checkbox"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbcbcb;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.custom-checkbox label [type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  display: none;
+  width: 4px;
+  height: 7px;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-color: #1cc691;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.custom-checkbox label [type="checkbox"]:checked {
+  background-color: #fff;
+}
+
+.custom-checkbox label [type="checkbox"]:checked::before {
+  display: block;
+}
+
+.custom-radio {
+  margin: 1rem 0;
+}
+
+.custom-radio label {
+  font-family: iubendaRegular;
+  letter-spacing: -0.5px;
+  color: #323232;
+  position: relative;
+  cursor: pointer;
+  padding: 0 2rem;
+}
+
+.custom-radio label [type="radio"] {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-radio label [type="radio"]:checked + .green-circle::after {
+  display: block;
+}
+
+.custom-radio label .green-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbcbcb;
+  border-radius: 50%;
+}
+
+.custom-radio label .green-circle::after {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: none;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: #1cc691;
+  border-radius: 50%;
+}
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.qst {
+  font-family: iubendaMedium;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #cbcbcb;
+  padding: 0.5rem 0.3rem;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+/*# sourceMappingURL=style.css.map */
